@@ -1,4 +1,4 @@
-﻿namespace ValidateUser
+﻿namespace VideoAccess
 {
     public class Tape
     {

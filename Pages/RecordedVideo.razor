@@ -2,7 +2,7 @@
 @inject HttpClient _client
 
 <h3>CW Recorded Videos</h3>
-@if (Globals.ValidatedUser)
+@if (Globals.VideoAccess)
 {
 
     <QuickGrid Items="@videosQ" Theme="corporate" style="width:100%">
@@ -35,7 +35,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        if (Globals.ValidatedUser)
+        if (Globals.VideoAccess)
         {
             try
             {

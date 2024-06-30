@@ -1,6 +1,6 @@
 {
-  "name": "ValidateUser",
-  "short_name": "ValidateUser",
+  "name": "VideoAccess",
+  "short_name": "VideoAccess",
   "id": "./",
   "start_url": "./",
   "display": "standalone",

@@ -3,7 +3,7 @@
 
 
 <h3>Tapes</h3>
-@if (Globals.ValidatedUser)
+@if (Globals.VideoAccess)
 {
 
     <QuickGrid Items="@tapesQ" Theme="corporate">
@@ -33,7 +33,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        if (Globals.ValidatedUser)
+        if (Globals.VideoAccess)
         {
             try
             {

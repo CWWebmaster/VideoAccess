@@ -8,7 +8,7 @@
         <div>@errorMessage</div>
 
 
-        @if (Globals.ValidatedUser == true)
+        @if (Globals.VideoAccess == true)
         {
             <p>Signed in as @Globals.Username</p>
             <ul>
@@ -48,8 +48,8 @@
             <div class="form-group">
                 <label class="col-md-4 control-label" for="passwordinput">Password</label>
                 <div class="col-md-4">
-                    <input @bind="InPassword" @bind:event="oninput" id="passwordinput" name="passwordinput" placeholder="Club Password" class="form-control input-md" required="" 
-                    type="@(ShowPassword ? "text" : "password")" 
+                    <input @bind="InPassword" @bind:event="oninput" id="passwordinput" name="passwordinput" placeholder="Club Password" class="form-control input-md" required=""
+                    type="@(ShowPassword ? "text" : "password")"
                     @onkeydown="@Enter">
 
                 </div>
@@ -144,7 +144,7 @@
                 if (result)
                 {
                     Globals.EmailAddress = email;
-                    Globals.ValidatedUser = true;
+                    Globals.VideoAccess = true;
                     Globals.Username = email;
                     message = "Start watching the videos. Click a category on the menu to the left.";
                     break;
@@ -158,7 +158,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        if (Globals.ValidatedUser)
+        if (Globals.VideoAccess)
         {
 
         }
